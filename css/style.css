@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --pinkish: #FF7979;
+    --greenish: #38CC8B;
+    --blueish: #5E54A4;
+    --darkish: #3D3B48;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4;
+}
+
+@media (min-width: 280px) {
+    .container {
+        background: url(../images/bg-intro-mobile.png);
+        background-color: var(--pinkish);
+        width: 100%;
+    }
+    .app-desc-and-controller {
+        min-height: 100vh;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .app-desc-and-controller>* {
+        margin-top: 20px;
+    }
+    .desc {
+        color: white;
+    }
+    .desc h2 {
+        text-align: center;
+        padding: 0px 60px;
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 1;
+    }
+    .desc p {
+        text-align: center;
+        line-height: 1.5;
+    }
+    .desc>* {
+        margin-top: 20px;
+    }
+    .controller {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .controller a {
+        background: var(--blueish);
+        display: block;
+        max-width: 80%;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .controller form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        min-height: 45vh;
+    }
+    .controller form label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        min-height: 40px;
+        margin: 20px 0 0 20px;
+    }
+    .controller input {
+        padding: 10px 0 10px 5px;
+        border: 1px solid rgb(218, 218, 218);
+        width: 95%;
+    }
+    .controller input.invalid {
+        border: 1px solid red;
+    }
+    .controller input::placeholder {
+        font-weight: 700;
+        padding-left: 10px;
+    }
+    .controller input:focus {
+        font-weight: 700;
+        padding-left: 10px;
+    }
+    .valid-msgs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .valid-msgs p {
+        text-align: right;
+        font-size: 0.7rem;
+        color: rgb(211, 14, 14);
+        padding-right: 10px;
+    }
+    .controller button {
+        background: var(--greenish);
+        width: 90%;
+        margin: 20px 0 0 20px;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        border: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    .controller button:hover {
+        opacity: 0.9;
+    }
+    .controller button:active {
+        opacity: 1;
+        box-shadow: none;
+        transform: scale(0.99);
+    }
+    .terms-explanation {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .terms-explanation p {
+        padding: 0 20px;
+        font-weight: 300;
+        color: gray;
+    }
+    .terms-explanation span {
+        color: var(--pinkish);
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .app-desc-and-controller {
+        background: url(../images/bg-intro-desktop.png);
+        background-color: var(--pinkish);
+        min-height: 90vh;
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: row;
+        padding: 20px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .desc {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .desc h2, .desc p {
+        text-align: left;
+        padding-right: 70px;
+    }
+    .desc h2 {
+        padding-left: 0;
+        font-size: 2rem;
+    }
+    .controller a {
+        min-width: 50%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .app-desc-and-controller {
+        min-height: 90vh;
+        width: 60%;
+        padding-bottom: 0;
+    }
+    .desc h2 {
+        padding-left: 0;
+        font-size: 2.5rem;
+    }
+    .desc p {
+        font-size: 1.1rem;
+    }
+}

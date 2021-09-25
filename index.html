@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="app-desc-and-controller">
+        <section class="desc">
+          <h2>Learn to code by watching others</h2>
+          <p>
+            See how experienced developers solve problems in real-time. Watchin
+            scripted tutorials is great, but understanding hwo developers think
+            is invaluable.
+          </p>
+        </section>
+        <section class="controller">
+          <a href="#">Try it free 7 days then $20/mo. thereafter</a>
+          <form action="">
+            <label>
+              <input type="text" name="first-name" placeholder="First Name" />
+              <div class="valid-msgs first-name" data-id="first-name"></div>
+            </label>
+            <label>
+              <input type="text" name="second-name" placeholder="Second Name" />
+              <div class="valid-msgs second-name" data-id="second-name"></div>
+            </label>
+            <label>
+              <input type="email" name="email" placeholder="Email Address" />
+              <div class="valid-msgs email" data-id="email"></div>
+            </label>
+            <label>
+              <input type="password" name="password" placeholder="Password" />
+              <div class="valid-msgs password" data-id="password"></div>
+            </label>
+            <button>Claim Your free Trail</button>
+
+            <div class="terms-explanation">
+              <p>
+                By clicking the button, you are agreeing to our
+                <span>Terms and Services.</span>
+              </p>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
