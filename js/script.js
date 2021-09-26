@@ -88,6 +88,7 @@ function checkPassword(val) {
 }
 
 function appendInvalidMsgs() {
+  console.log("hej");
   const firstMsgs = checkFirst(inputs[0].value);
   const secondMsgs = checkSecond(inputs[1].value);
   const emailMsgs = checkEmail(inputs[2].value);
@@ -95,6 +96,9 @@ function appendInvalidMsgs() {
   const arrMsgs = [firstMsgs, secondMsgs, emailMsgs, passwordMsgs];
   nodeMsgsContainer.forEach((node, index) => {
     node.innerHTML = "";
+    if (arrMsgs[index]?.length == 0) {
+      node.parentElement.classList.remove("invalid");
+    }
     if (arrMsgs[index]?.length > 0) {
       validMsgs[node.dataset.id].forEach((msg) => {
         const values = [];
@@ -104,7 +108,7 @@ function appendInvalidMsgs() {
           }
         }
         values.forEach((value) => {
-          node.previousElementSibling.classList.add("invalid");
+          node.parentElement.classList.add("invalid");
           const p = document.createElement("p");
           p.textContent = value;
           node.appendChild(p);
@@ -120,8 +124,8 @@ btn.addEventListener("click", function (e) {
 });
 
 inputs.forEach((input) =>
-  input.addEventListener("keydown", function (e) {
-    if (this.classList.contains("invalid")) {
+  input.addEventListener("keyup", function (e) {
+    if (this.parentElement.classList.contains("invalid")) {
       this.classList.remove("invalid");
       appendInvalidMsgs();
     }
