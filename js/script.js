@@ -88,7 +88,6 @@ function checkPassword(val) {
 }
 
 function appendInvalidMsgs() {
-  console.log("hej");
   const firstMsgs = checkFirst(inputs[0].value);
   const secondMsgs = checkSecond(inputs[1].value);
   const emailMsgs = checkEmail(inputs[2].value);

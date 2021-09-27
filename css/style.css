@@ -28,7 +28,7 @@ body {
     .container {
         background: url(../images/bg-intro-mobile.png);
         background-color: var(--pinkish);
-        width: 100%;
+        min-width: 100%;
     }
     .app-desc-and-controller {
         min-height: 100vh;
